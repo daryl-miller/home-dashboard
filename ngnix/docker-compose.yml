@@ -1,0 +1,10 @@
+web:
+  image: nginx
+  volumes:
+   - ./templates:/etc/nginx/templates
+   - ../dashboard-app/web-build:/var/www/kruvin/html
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=krux.me
+   - NGINX_PORT=80
