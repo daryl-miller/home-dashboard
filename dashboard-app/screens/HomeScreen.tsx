@@ -1,14 +1,18 @@
 import React, { useCallback } from "react";
 import { Alert, Button, Linking, StyleSheet, View } from "react-native";
 
-const bashUrl = 'http://192.168.0.181';
+const baseUrl = 'http://192.168.0.181';
 
-const plexUrl = `${bashUrl}:32400/`;
-const qbittorrentUrl = `${bashUrl}:8090/`;
-const jackettUrl = `${bashUrl}:9117/`;
-const radarrUrl = `${bashUrl}:7878/`;
-const sonarrUrl = `${bashUrl}:8989/`;
-const piholeUrl = `${bashUrl}:8091/admin`;
+const plexUrl = `${baseUrl}:32400/`;
+const ombiUrl = `${baseUrl}:3579/`
+const qbittorrentUrl = `${baseUrl}:8090/`;
+const jackettUrl = `${baseUrl}:9117/`;
+const radarrUrl = `${baseUrl}:7878/`;
+const sonarrUrl = `${baseUrl}:8989/`;
+const piholeUrl = `${baseUrl}:8091/admin`;
+const grafanaUrl = `${baseUrl}:3030`
+const prometheusUrl = `${baseUrl}:9090`
+
 
 const OpenURLButton = ({ url, children }) => {
   const handlePress = useCallback(async () => {
@@ -31,6 +35,9 @@ const App = () => {
   return (
     <View style={styles.container}>
       <OpenURLButton url={plexUrl}>Plex</OpenURLButton>
+      <OpenURLButton url={ombiUrl}>ombi</OpenURLButton>
+      <OpenURLButton url={grafanaUrl}>grafana</OpenURLButton>
+      <OpenURLButton url={prometheusUrl}>prometheus</OpenURLButton>
       <OpenURLButton url={jackettUrl}>jackett</OpenURLButton>
       <OpenURLButton url={radarrUrl}>radarr</OpenURLButton>
       <OpenURLButton url={sonarrUrl}>sonarr</OpenURLButton>

@@ -8,7 +8,7 @@ export default function DashboardScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Dashboard</Text>
-      <Text Style={styles.container}>Stuff will go here eventually?</Text>
+      <Text style={styles.container}>Stuff will go here eventually?</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       {/* <EditScreenInfo path="/screens/DashboardScreen.tsx" /> */}
     </View>
